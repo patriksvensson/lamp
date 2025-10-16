@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Lamp.Testing</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Errata"/>
+    <PackageReference Include="Shouldly"/>
+    <PackageReference Include="Spectre.Console.Testing"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lamp\Lamp.csproj" />
+  </ItemGroup>
+
+</Project>
