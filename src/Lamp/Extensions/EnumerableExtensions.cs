@@ -2,13 +2,16 @@ namespace Lamp;
 
 internal static class EnumerableExtensions
 {
-    public static IReadOnlyList<T> ToSafeReadOnlyList<T>(this IEnumerable<T> source)
+    extension<TSource>(IEnumerable<TSource> source) // extension members for IEnumerable<TSource>
     {
-        return source switch
+        public IReadOnlyList<TSource> ToSafeReadOnlyList()
         {
-            null => new List<T>(),
-            IReadOnlyList<T> list => list,
-            _ => source.ToList(),
-        };
+            return source switch
+            {
+                null => new List<TSource>(),
+                IReadOnlyList<TSource> list => list,
+                _ => source.ToList(),
+            };
+        }
     }
 }

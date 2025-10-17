@@ -11,8 +11,13 @@ Task("Clean")
 });
 
 Task("Build")
-    .Does(context => 
+    .Does(context =>
 {
+    DotNetFormatStyle("./src/Lamp.slnx", new DotNetFormatSettings
+    {
+        VerifyNoChanges = true,
+    });
+
     DotNetBuild("./src/Lamp.slnx", new DotNetBuildSettings {
         Configuration = configuration,
         NoIncremental = context.HasArgument("rebuild"),

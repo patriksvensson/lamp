@@ -12,7 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)/stylecop.json" Link="Properties/stylecop.json" />
     <Compile Include="$(MSBuildThisFileDirectory)/Annotations.cs" Link="Properties/Annotations.cs" />
   </ItemGroup>
 
@@ -44,7 +43,6 @@
     <PackageReference Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
     <PackageReference Include="Roslynator.Analyzers" PrivateAssets="All" />
-    <PackageReference Include="StyleCop.Analyzers" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>

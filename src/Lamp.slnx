@@ -11,6 +11,9 @@
     <File Path=".editorconfig" />
     <File Path="stylecop.json" />
   </Folder>
+  <Folder Name="/Root/">
+    <File Path="..\.editorconfig" />
+  </Folder>
   <Project Path="Lamp.Testing\Lamp.Testing.csproj" Type="Classic C#">
     <Configuration Solution="Debug|x64" Project="Debug|Any CPU" />
     <Configuration Solution="Debug|x86" Project="Debug|Any CPU" />
